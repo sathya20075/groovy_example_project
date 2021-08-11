@@ -1,4 +1,4 @@
-import script.groovy
+def groovy
 pipeline{
     
     agent {
@@ -10,9 +10,12 @@ pipeline{
         stage('Invoke a groovy script'){
             steps{
                 script {
-                  def groovy=load "script.groovy"
+                  groovy = load 'script.groovy'
                 }
             }
         }
+	stage('Compile a java app'){
+	    groovy.compileApp()
+	}
     }
 }

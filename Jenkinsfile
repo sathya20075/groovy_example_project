@@ -15,7 +15,9 @@ pipeline{
             }
         }
 	stage('Compile a java app'){
+	  steps{
 	    groovy.compileApp()
+	    }
 	}
     }
 }

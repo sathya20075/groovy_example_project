@@ -3,6 +3,10 @@ pipeline{
     agent {
         label any
     }
+
+    environment{
+      def groovy;
+    }
     
     stages{
         stage('Invoke a groovy script'){

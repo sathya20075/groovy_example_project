@@ -1,3 +1,4 @@
+import script.groovy
 pipeline{
     
     agent {

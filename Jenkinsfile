@@ -1,10 +1,7 @@
 def groovy
 pipeline{
     
-    agent {
-        label any
-    }
-
+    agent any
     
     stages{
         stage('Invoke a groovy script'){

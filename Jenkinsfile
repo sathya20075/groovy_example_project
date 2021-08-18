@@ -18,5 +18,28 @@ pipeline{
 	      }
 	    }
 	}
+        stage('Test a java app'){
+	  steps{
+	     script{
+	       groovy.testApp()
+	      }
+	    }
+	}
+	stage('Build a java app'){
+	  steps{
+	     script{
+	       groovy.buildApp()
+	      }
+	    }
+	}
+	stage('Deploy a java app'){
+	  steps{
+	     script{
+	       groovy.deployApp()
+	      }
+	    }
+	}
+	    
+	    
     }
 }
